@@ -1,0 +1,47 @@
+.card img{
+	height:200px;
+}
+.card {
+	margin-left:20px;
+}
+
+#font h4,p{
+	font-size: 10px;
+}
+
+.card responsive{
+    float: right;
+    border: 1px dotted black;
+    margin: 0px 0px 15px 20px;
+    width: 100%;
+    height: auto;
+	margin-left:10px;
+	position: relative;
+	display: table;
+	overflow-x:auto;
+	overflow-y:auto;
+    min-width:100px;	
+
+
+.align{
+	float:center;
+
+
+
+
+}
+.h1{
+
+	position: relative;
+	font:10px;
+		overflow-y:auto;
+	}
+	
+	.card {
+		background:	#BDB76B;
+	
+	}
+	.body{
+	background:#008000;
+	}
+

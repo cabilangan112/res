@@ -13,6 +13,8 @@ from forms import RestaurantForm, DishForm
 from django.views.generic import View 
 
 
+
+		
 class RestaurantDetail(DetailView):
 	model = Restaurants
 	template_name = 'myrestaurants/restaurant_detail.html'

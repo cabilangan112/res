@@ -1,14 +1,14 @@
-{% extends "myrestaurants/base.html" %}
+{% extends "base_generic.html" %}
 
 {% block content %}
 <h1>
   Restaurants 
-  {% if user %}(<a href="{% url 'myrestaurants:restaurant_create' %}">add</a>){% endif %}
+  {% if user %}(<a href="">add</a>){% endif %}
 </h1>
 
 <ul>
   {% for restaurant in latest_restaurant_list %}
-    <li><a href="{% url 'myrestaurants:restaurant_detail' restaurant.id %}">
+    <li><a href="">
     {{ restaurant.name }}</a></li>
   {% empty %}<li>Sorry, no restaurants registered yet.</li>
   {% endfor %}

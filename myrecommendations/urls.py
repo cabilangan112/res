@@ -22,7 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^Restaurant/', include('restaurants.urls', namespace='restaurants')),
+	url(r'^restaurants/', include('restaurants.urls', namespace='restaurants')),
 	url(r'^$', RedirectView.as_view(url='/restaurants/', permanent=True)),
 	url(r'^accounts/',include('django.contrib.auth.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

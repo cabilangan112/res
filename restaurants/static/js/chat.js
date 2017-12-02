@@ -1,0 +1,1 @@
+$('body').delegate('.hidden_box:not(.chat_box)', 'click', function() { showChat(this); });
