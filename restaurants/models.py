@@ -14,7 +14,7 @@ class Restaurants(models.Model):
 	Telephone 		=  models.CharField(max_length=200, blank=True, null=True)
 	url				=  models.URLField(blank=True, null=True)
 	user			=  models.ForeignKey(User, default=1)
-	Date 			=  models.DateField(default=date.today)
+	date 			=  models.DateField(default=date.today)
 	
 	def __unicode__(self):
 		return u"%s" % self.name
@@ -40,6 +40,8 @@ class Review(models.Model):
 
     class Meta:
         abstract = True
+		
 
 class RestaurantReview(Review):
-    restaurant = models.ForeignKey(Restaurants)
+	restaurant 		= models.ForeignKey(Restaurants)
+	
