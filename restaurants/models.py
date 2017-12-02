@@ -4,14 +4,14 @@ from django.core.urlresolvers import reverse
 from datetime import date
 
 class Restaurants(models.Model):
-	name 	  		=  models.TextField()
-	street    	    =  models.TextField(blank=True, null=True)
+	name 	  		=  models.CharField(max_length=200)
+	street    	    =  models.CharField(max_length=200, blank=True, null=True)
 	number      	=  models.IntegerField(blank=True, null=True)
-	city			=  models.TextField(default="")
-	ZipCode 		=  models.TextField(blank=True, null=True)
-	StateOrProvince =  models.TextField(blank=True, null=True)
-	Country 		=  models.TextField(blank=True, null=True)
-	Telephone 		=  models.TextField(blank=True, null=True)
+	city			=  models.CharField(max_length=200, default="")
+	ZipCode 		=  models.CharField(max_length=200, blank=True, null=True)
+	StateOrProvince =  models.CharField(max_length=200, blank=True, null=True)
+	Country 		=  models.CharField(max_length=200, blank=True, null=True)
+	Telephone 		=  models.CharField(max_length=200, blank=True, null=True)
 	url				=  models.URLField(blank=True, null=True)
 	user			=  models.ForeignKey(User, default=1)
 	Date 			=  models.DateField(default=date.today)
@@ -20,8 +20,8 @@ class Restaurants(models.Model):
 		return u"%s" % self.name
 		
 class Dish(models.Model):
-    name 			= models.TextField()
-    description 	= models.TextField(blank=True, null=True)
+    name 			= models.CharField(max_length=200)
+    description 	= models.CharField(max_length=200, blank=True, null=True)
     price 			= models.DecimalField('Euro amount', max_digits=8, decimal_places=2, blank=True, null=True)
     user		 	= models.ForeignKey(User, default=1)
     date			= models.DateField(default=date.today)

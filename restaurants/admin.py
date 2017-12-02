@@ -2,5 +2,15 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from .models import Restaurants, Dish,  RestaurantReview
 
-# Register your models here.
+
+
+
+
+
+admin.site.register	(Restaurants)
+admin.site.register	(Dish)
+admin.site.register	(RestaurantReview)
+
+
